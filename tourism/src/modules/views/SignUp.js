@@ -38,7 +38,8 @@ const Register = () =>  {
         name: "",
         email: "",
         password: "",
-        reEnterPassword: ""
+        reEnterPassword: "",
+        isAdmin: "false"
     })
 
     const handleChange = e => {
@@ -50,11 +51,11 @@ const Register = () =>  {
     }
 
     const register = () => {
-        const {name, email, password, reEnterPassword} = user
+        const {name, email, password, reEnterPassword, isAdmin} = user
         console.log('User Details: ', user)
         if (name && email && password && (password === reEnterPassword)){
             // alert("posted")
-            axios.post("http://localhost:9002/register", user)
+            axios.post("http://localhost:9002/user/register", user)
             .then( res => {alert(res.data.message)
                 navigate("/signIn")
             })
