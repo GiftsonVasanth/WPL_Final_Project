@@ -1,12 +1,18 @@
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import AppAppBar from './modules/views/AppAppBar';
+import AppFooter from './modules/views/AppFooter';
+
+ 
 
 const useStyles = makeStyles({
     root: {
       minWidth: 275,
-      border: `2px solid red`,
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      border: `#DCDCDC`,
+      background: '#DCDCDC',
+      marginBottom: 10,
+      marginTop : 10
     },
   });
 
@@ -25,16 +31,16 @@ export default function Dynamic() {
     }, [])
 
     return (
-        <Container>
+        <><AppAppBar /><Container>
             <Row>
                 {attractionData.map((attractionData, k) => (
                     <Col key={k} xs={12} md={4} lg={3}>
                         <Card className={classes.root}>
-                            <Card.Img variant="top" src="holder.js/100px180" />
+                            <Card.Img variant="top" src="https://fastly.4sqi.net/img/general/200x200/7990081_d_2diKN7oPHt_6Eq-pjt3Fh7oWMwiRD3Ciu5hw-OZfk.jpg" />
                             <Card.Body>
                                 <Card.Title>{attractionData.name}</Card.Title>
                                 <Card.Text>
-                                {attractionData.location}
+                                    {attractionData.location}
                                 </Card.Text>
                                 <Button variant="primary">Go somewhere</Button>
                             </Card.Body>
@@ -42,7 +48,7 @@ export default function Dynamic() {
                     </Col>
                 ))}
             </Row>
-        </Container>
+        </Container><AppFooter /></>
     )
 }
 

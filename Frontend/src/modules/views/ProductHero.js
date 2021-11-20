@@ -37,7 +37,7 @@ export default function ProductHero() {
         variant="contained"
         size="large"
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="/items"
         sx={{ minWidth: 200 }}
       >
         Check Tour Packages

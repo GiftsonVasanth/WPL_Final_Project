@@ -16,3 +16,6 @@ app.use('/api/items', itemRouter);
 app.listen(9002, () =>{
     console.log("Be started at port 9002")
 })
+
+//"C:\Program Files\MongoDB\Server\5.0\bin\mongod.exe" --dbpath="c:\data\db"
+
