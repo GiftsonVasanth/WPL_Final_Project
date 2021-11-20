@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import SignIn from './modules/views/SignIn';
 import SignUp from './modules/views/SignUp';
 import withRoot from './modules/withRoot';
+import Items from './Items';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function Index() {
@@ -15,7 +16,7 @@ function Index() {
       <Route path="/" element={<HomePage data={user}/>} />
         <Route path="/signIn" element={<SignIn setLoginUser={setLoginUser} />} />
         <Route path="/register" element={<SignUp setLoginUser={setLoginUser} />} />
-
+        <Route path="/items" element={<Items />} />
       </Routes>
     </Router>
     
