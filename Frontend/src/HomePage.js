@@ -10,11 +10,12 @@ import AppAppBar from './modules/views/AppAppBar';
 import withRoot from './modules/withRoot';
 
 
-function HomePage(data) {
+const HomePage = (props) => {
   
     return (
       <React.Fragment>
-          <AppAppBar />
+          <AppAppBar/>
+          {props.data.name}
           <ProductHero />
           <ProductValues />
           <ProductCategories />
