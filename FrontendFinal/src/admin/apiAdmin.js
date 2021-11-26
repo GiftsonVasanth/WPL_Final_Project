@@ -135,8 +135,8 @@ export const getProducts = () => {
 };
 
 export const deleteProduct = (productId, userId, token) => {
-    return fetch(`${API}/product/${productId}/${userId}`, {
-        method: 'DELETE',
+    return fetch(`${API}/product/delete/${productId}/${userId}`, {
+        method: 'PUT',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',

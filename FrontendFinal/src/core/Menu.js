@@ -18,7 +18,7 @@ const isActive = (history, path) => {
 
 const Menu = ({ history }) => (
     <nav className="navbar navbar-expand-md navbar-dark" id="my-nav">
-        <Link className="navbar-brand" to="/">TravelYaari</Link>
+        <Link className="navbar-brand" to="/">The Tour</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
         </button>

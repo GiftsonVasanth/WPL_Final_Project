@@ -69,9 +69,25 @@ exports.create = (req, res) => {
     });
 };
 
+// exports.remove = (req, res) => {
+//     let product = req.product;
+//     product.remove((err, deletedProduct) => {
+//         if (err) {
+//             return res.status(400).json({
+//                 error: errorHandler(err)
+//             });
+//         }
+//         res.json({
+//             message: 'Product deleted successfully'
+//         });
+//     });
+// };
+
 exports.remove = (req, res) => {
     let product = req.product;
-    product.remove((err, deletedProduct) => {
+    product.isDeleted = true;
+
+    product.save((err, result) => {
         if (err) {
             return res.status(400).json({
                 error: errorHandler(err)
@@ -79,8 +95,10 @@ exports.remove = (req, res) => {
         }
         res.json({
             message: 'Product deleted successfully'
-        });
+        });    
     });
+
+
 };
 
 exports.update = (req, res) => {
@@ -133,7 +151,7 @@ exports.list = (req, res) => {
     let sortBy = req.query.sortBy ? req.query.sortBy : '_id';
     let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
-    Product.find()
+    Product.find({isDeleted:false})
         .select('-photo')
         .populate('category')
         .sort([[sortBy, order]])
@@ -197,7 +215,7 @@ exports.listBySearch = (req, res) => {
 
     // console.log(order, sortBy, limit, skip, req.body.filters);
     // console.log("findArgs", findArgs);
-
+    findArgs['isDeleted'] = false;
     for (let key in req.body.filters) {
         if (req.body.filters[key].length > 0) {
             if (key === 'price') {
@@ -250,6 +268,7 @@ exports.listSearch = (req, res) => {
         if (req.query.category && req.query.category != 'All') {
             query.category = req.query.category;
         }
+        query.isDeleted = false;
         // find the product based on query object with 2 properties
         // search and category
         Product.find(query, (err, products) => {

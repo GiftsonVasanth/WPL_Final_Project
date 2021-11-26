@@ -5,6 +5,11 @@ import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrices";
+import usePagination from "./pagination";
+import { Pagination } from "@material-ui/lab";
+
+
+
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
         filters: { category: [], price: [] }
@@ -12,10 +17,13 @@ const Shop = () => {
     const [categories, setCategories] = useState([]);
     /* eslint-disable no-unused-vars */
     const [error, setError] = useState(false);
-    const [limit, setLimit] = useState(6);
+    const [limit, setLimit] = useState(100);
     const [skip, setSkip] = useState(0);
     const [size, setSize] = useState(0);
     const [filteredResults, setFilteredResults] = useState([]);
+
+    let [page, setPage] = useState(1);
+    const PER_PAGE = 5;
 
     const init = () => {
         getCategories().then(data => {
@@ -33,6 +41,7 @@ const Shop = () => {
             if (data.error) {
                 setError(data.error);
             } else {
+                console.log('size :', data.size);
                 setFilteredResults(data.data);
                 setSize(data.size);
                 setSkip(0);
@@ -40,30 +49,17 @@ const Shop = () => {
         });
     };
 
-    const loadMore = () => {
-        let toSkip = skip + limit;
-        // console.log(newFilters);
-        getFilteredProducts(toSkip, limit, myFilters.filters).then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setFilteredResults([...filteredResults, ...data.data]);
-                setSize(data.size);
-                setSkip(toSkip);
-            }
-        });
+    const count = Math.ceil(filteredResults.length / PER_PAGE);
+    const _DATA = usePagination(filteredResults, PER_PAGE);
+
+    const handleChange = (e, p) => {
+        setPage(p);
+        _DATA.jump(p);
     };
 
-    const loadMoreButton = () => {
-        return (
-            size > 0 &&
-            size >= limit && (
-                <button onClick={loadMore} className="btn btn-warning mb-5 font-weight-bold rounded">
-                    Load more
-                </button>
-            )
-        );
-    };
+    
+
+    
 
     useEffect(() => {
         init();
@@ -112,10 +108,7 @@ const Shop = () => {
             />
         </div>
         </div>
-        <div className="container-fluid mb-2 p-1 shadow">
-            <h1 className="h1 text-center my-3 p-2 font-weight-bold"><span style={{color:"orange"}}>Incre</span><span style={{color:"#e8e8e8"}}>dible</span><span style={{color:"green"}}> India!</span></h1>
-            <p className="text-justify mx-2">Travel to the 27 vibrant states in the multilingual, multicultural and pluralistic Union of India. Each of the Indian states has something exclusive to offer to wide-eyed tourists who flock throughout the year. India is a major travel and tourist destination because of its rich and versatile travel experience in terms of recreational and adventure activities, historic and modern tourist sites, cultural and spiritual insight. Travel to India is like exploring its treasure trove. The priceless monuments like the Taj Mahal and the Imambara attract tourists to India besides revealing its rich architectural and cultural heritage. </p>
-        </div>
+        
         <div className="container-fluid">
             <div className="row mt-3">
                 <div className="col-md-2 col-sm-12 border-right shadow">
@@ -127,16 +120,25 @@ const Shop = () => {
                     }
                     />
                 </div>
+
                 <div className="col-md-10 col-sm-12">
                     <div className="row mx-auto">
-                        {filteredResults.map((product, i) => (
+                        {_DATA.currentData().map((product, i) => (
                             <div key={i} className="col-md-4 col-sm-6 col-xs-12 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
                     </div>
                     <hr />
-                    {loadMoreButton()}
+                    <Pagination
+                        count={count}
+                        size="large"
+                        page={page}
+                        variant="outlined"
+                        shape="rounded"
+                        onChange={handleChange}
+                    />
+                   
                 </div>
             </div>
         </div>
