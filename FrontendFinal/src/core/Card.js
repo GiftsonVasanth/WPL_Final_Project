@@ -45,7 +45,7 @@ const Card = ({
     return (
       showAddToCartButton && (
         <button onClick={addToCart} className="btn btn-success mt-2 mb-2 card-btn-1 " id="add-to-cart">
-          Book Now!
+          Add to Cart
         </button>
       )
     );
@@ -109,7 +109,7 @@ const Card = ({
       <h6 className="font-weight-bold h6" style={{fontWeight:"600",fontSize:"0.8em",color:"#eb07c1"}}>{product.subname}</h6>
       <StarRating />
       </div>
-      <div className="mt-2 px-3"><p className="badge badge-warning badge-pill shadow">Price : ₹ {product.price}</p></div>
+      <div className="mt-2 px-3"><p className="badge badge-warning badge-pill shadow">Price : $ {product.price}</p></div>
   </div>
 </div>
   <div className="text-justify m-2 p-2" style={{fontSize:"14px",fontWeight:"500"}}>
