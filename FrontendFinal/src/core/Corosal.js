@@ -23,7 +23,7 @@ export default function Corosal() {
     <img className="d-block w-100 img-fluid" src={img2} alt="First slide"/>
     <Carousel.Caption className="corosal-caption-center justify-content-start">
       <div className="text-left">
-      <h1 className="display-4 text-white pb-3 font-weight-bold">Group & Individual Gataways Experience. </h1>
+      <h1 className="display-4 text-white pb-3 font-weight-bold">Group & Individual Getaways Experience. </h1>
       <p className="d-block w-100 h5">Amsterdam. Barcelona. Dubai. London. Paris. Rome</p>
       <button className="btn btn-success btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
       </div>

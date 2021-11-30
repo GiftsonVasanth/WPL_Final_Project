@@ -120,7 +120,7 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/cart")}
                     to="/cart"
                 >
-                    Added Place{" "}
+                    Cart{" "}
                     <sup>
                         <small className="cart-badge">{itemTotal()}</small>
                     </sup>
