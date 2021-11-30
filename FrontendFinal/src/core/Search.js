@@ -29,7 +29,7 @@ const Search = () => {
 
     const searchData = () => {
         // console.log(search, category);
-        if (search) {
+        if (search || category) {
             list({ search: search || undefined, category: category }).then(
                 response => {
                     if (response.error) {
