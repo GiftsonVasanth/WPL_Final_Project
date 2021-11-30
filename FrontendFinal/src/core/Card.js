@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import ShowImage from './ShowImage';
 import moment from 'moment';
-import ModalVideo from 'react-modal-video';
 import { addItem, updateItem, removeItem } from './cartHelpers';
 import StarRating from './StarRating';
 import './../../node_modules/react-modal-video/scss/modal-video.scss';

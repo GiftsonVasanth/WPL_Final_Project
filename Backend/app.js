@@ -18,7 +18,7 @@ const app = express();
 
 // db
 mongoose
-    .connect("mongodb://localhost:27017/tourism2", {
+    .connect("mongodb://localhost:27017/tourismDB", {
         useNewUrlParser: true,
         useCreateIndex: true,
         useUnifiedTopology: true,

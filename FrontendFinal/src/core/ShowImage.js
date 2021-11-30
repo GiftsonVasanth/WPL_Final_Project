@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { API } from "../config";
-import ModalVideo from 'react-modal-video';
 import './../../node_modules/react-modal-video/scss/modal-video.scss';
 const ShowImage = ({ item, url }) =>{ 
     const [isOpen, setOpen] = useState(false);
