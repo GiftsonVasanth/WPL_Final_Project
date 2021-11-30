@@ -98,7 +98,7 @@ const Shop = () => {
             description=""
             className=""
         >
-        <div className="container-fluid bg-success w-100 shadow">
+        <div className="container-fluid navbar-dark w-100 shadow">
         <div className="row p-2">
             <Checkbox
                 categories={categories}

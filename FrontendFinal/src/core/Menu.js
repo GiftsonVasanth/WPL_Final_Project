@@ -4,8 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
 // eslint-disable-next-line
 import { itemTotal } from "./cartHelpers";
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
+
 
 const isActive = (history, path) => {
     if (history.location.pathname === path) {
@@ -141,37 +140,7 @@ const Menu = ({ history }) => (
                     </span>
                 </li>
             )}
-            {isAuthenticated() && (
-                <li className="nav-item">
-                <Dropdown className="m-0 p-0">
-                <Dropdown.Toggle  id="dropdown-basic" className="font-weight-bold">
-                More
-                </Dropdown.Toggle>
-                <Dropdown.Menu style={{background:'#4caf50',border:'none'}}>
-                <Dropdown.Item as ="button"><Link
-                            className="nav-link text-white dropdownid"
-                            style={isActive(history, "/about")}
-                            to="/about"
-                        >
-                            about Us
-                        </Link></Dropdown.Item>
-                <Dropdown.Item href="#/action-2"><Link
-                            className="nav-link dropdownid"
-                            style={isActive(history, "/team")}
-                            to="/team"
-                        >
-                            Our Team
-                        </Link></Dropdown.Item>
-                <Dropdown.Item href="#/action-3"><Link
-                            className="nav-link dropdownid"
-                            style={isActive(history, "/contact")}
-                            to="/contact"
-                        >Contact Us
-                        </Link></Dropdown.Item>
-                </Dropdown.Menu>
-                </Dropdown>
-            </li>
-            )}
+            
             
         </ul>
     </div>

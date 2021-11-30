@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FooterPagePro = () => {
   return (
     <MDBFooter color="blue-grey" className="page-footer font-small lighten-5 pt-0">
-      <div className="bg-success">
+      <div className="navbar-dark">
         <MDBContainer>
           <MDBRow className="py-4 d-flex align-items-center">
             <MDBCol md="6" lg="5" className="text-center text-md-left mb-4 mb-md-0">
@@ -116,7 +116,7 @@ const FooterPagePro = () => {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
-      <div className="footer-copyright text-center py-3 bg-success">
+      <div className="footer-copyright text-center py-3 navbar-dark">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
           <a href="https://github.com/shsarv"> www.travelyaari.com</a>
