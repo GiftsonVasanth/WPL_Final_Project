@@ -101,7 +101,6 @@ const Card = ({
 <div className="card m-2 ">
   <div className="view overlay">
     {shouldRedirect(redirect)}
-    {/* <a href={product.youtubelink} data-toggle="lightbox" data-gallery="youtubevideos"> */}
     <ShowImage item={product} url="product" className="img-thumbnail" />
     <h5 className="ml-2 text-success h5 font-weight-bold pb-2">{product.name}</h5>
   </div>

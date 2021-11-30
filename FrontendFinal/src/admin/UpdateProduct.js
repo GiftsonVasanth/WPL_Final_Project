@@ -11,7 +11,6 @@ const UpdateProduct = ({ match }) => {
         description: '',
         price: '',
         categories: [],
-        youtubelink:'',
         category: '',
         shipping: '',
         quantity: '',
@@ -32,7 +31,6 @@ const UpdateProduct = ({ match }) => {
         // categories,
         category,
         shipping,
-        youtubelink,
         quantity,
         loading,
         error,
@@ -52,7 +50,6 @@ const UpdateProduct = ({ match }) => {
                     name: data.name,
                     description: data.description,
                     price: data.price,
-                    youtubelink:data.youtubelink,
                     category: data.category._id,
                     shipping: data.shipping,
                     quantity: data.quantity,
@@ -101,7 +98,6 @@ const UpdateProduct = ({ match }) => {
                     photo: '',
                     price: '',
                     quantity: '',
-                    youtubelink:'',
                     loading: false,
                     error: false,
                     redirectToProfile: true,
@@ -123,10 +119,6 @@ const UpdateProduct = ({ match }) => {
             <div className="form-group">
                 <label className="text-muted">Name</label>
                 <input onChange={handleChange('name')} type="text" className="form-control" value={name} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">youtube link (Id only)</label>
-                <input onChange={handleChange('youtubelink')} type="text" className="form-control" value={youtubelink} placeholder=" not this -https://youtu.be/a4pi2zKbf8Q but this only- a4pi2zKbf8Q" />
             </div>
             <div className="form-group">
                 <label className="text-muted">Description</label>

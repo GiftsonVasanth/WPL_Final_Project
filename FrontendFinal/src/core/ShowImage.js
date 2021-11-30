@@ -7,8 +7,6 @@ const ShowImage = ({ item, url }) =>{
     return(
     <div className="product-img">
     <div className="d-flex justify-content-center">
-    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={item.youtubelink}onClose={() => setOpen(false)} />
-    {/* <button className="btn-primary">VIEW DEMO</button> */}
         <img
             src={`${API}/${url}/photo/${item._id}`}
             alt={item.name}

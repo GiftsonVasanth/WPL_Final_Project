@@ -9,7 +9,6 @@ const AddProduct = () => {
     const [values, setValues] = useState({
         name: '',
         subname:'',
-        youtubelink:'',
         description: '',
         price: '',
         categories: [],
@@ -28,7 +27,6 @@ const AddProduct = () => {
     const {
         name,
         subname,
-        youtubelink,
         description,
         price,
         categories,
@@ -80,7 +78,6 @@ const AddProduct = () => {
                     ...values,
                     name: '',
                     subname:'',
-                    youtubelink:'',
                     description: '',
                     photo: '',
                     price: '',
@@ -109,10 +106,6 @@ const AddProduct = () => {
             <div className="form-group">
                 <label className="text-muted">Place sub Name</label>
                 <input onChange={handleChange('subname')} type="text" className="form-control" value={subname} />
-            </div>
-            <div className="form-group">
-                <label className="text-muted">youtube link (Id only)</label>
-                <input onChange={handleChange('youtubelink')} type="text" className="form-control" value={youtubelink} placeholder=" not this -https://youtu.be/a4pi2zKbf8Q but this only- a4pi2zKbf8Q" />
             </div>
 
             <div className="form-group">
