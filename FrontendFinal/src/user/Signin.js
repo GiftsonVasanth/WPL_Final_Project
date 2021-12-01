@@ -39,14 +39,16 @@ const Signin = () => {
     };
 
     const signUpForm = () => (
-        <div className="row display-flex mt-3">
-            <div className="col-sm-8 col-xs-10 col-md-4 offset-md-2 offset-sm-2 offset-xs-1 py-4 px-3 rounded-left" id="login-intro-form">
-                <h2 className="text-center text-white h2 font-weight-bold mt-2">Hello Globetrotter</h2>
-                <div className="login-account-wall p-4 mb-2">
-                    <img className="rounded-circle mx-auto d-block" src={avatar} alt="" />
+
+        <div className="container mt-2">
+        <div className="row display-flex">
+            <div className="col-sm-8 col-xs-10 col-md-4 offset-md-2 offset-sm-2 offset-xs-1 py-4 px-3 rounded-left">
+                
+                <div className="p-4 mb-3">
+                    <img className="rounded-circle mx-auto d-block" src={avatar} width="100px" height="100px" alt="" />
                     <form>
-                        <div className="form-group mt-3">
-                            <label className="text-white font-weight-bold">Email</label>
+                        <div className="form-group">
+                            <label className="text-dark font-weight-bold">Email</label>
                             <input
                              onChange={handleChange("email")}
                             type="email"
@@ -55,8 +57,8 @@ const Signin = () => {
                             />
                         </div>
 
-                        <div className="form-group mt-3">
-                            <label className="text-white font-weight-bold">Password</label>
+                        <div className="form-group">
+                            <label className="text-dark font-weight-bold">Password</label>
                             <input
                                 onChange={handleChange("password")}
                                 type="password"
@@ -64,22 +66,19 @@ const Signin = () => {
                                 value={password}
                             />
                         </div>
-                        <button onClick={clickSubmit} className="btn btn-success btn-block rounded font-weight-bold text-center">
+                        <button onClick={clickSubmit} className="btn btn-dark btn-block rounded font-weight-bold text-center">
                         Submit
                         </button>
                     </form>
                     <div className="text-center">
-                    <span className="text-center d-block text-danger font-weight-bold text-italic">or</span>
-                    <Link to="/signup" className="text-white">Create an account </Link>
+                    <span className="text-center d-block text-dark font-weight-bold text-italic">or</span>
+                    <Link to="/signup" className="text-dark font-weight-bold">Create an account here!! </Link>
                     </div>
                 </div>
 
             </div>
-            <div className="col-sm-8 col-xs-10 col-md-4 rounded-right py-4 px-3" id="login-intro">
-                <h2 className="login-login-title text-center mt-2 h2">Welcome toTravelYaari</h2>
-                <img className="img-fluid img-rounded" src={sideimage} alt="signup" />
-                <p className="text-center text-warning">We Are Happy to see you here. We are working to provide the best services to you.</p>
-            </div>
+
+        </div>
         </div>
     );
 
