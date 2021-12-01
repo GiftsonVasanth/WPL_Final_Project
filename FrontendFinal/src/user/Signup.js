@@ -9,11 +9,12 @@ const Signup = () => {
         name: '',
         email: '',
         password: '',
+        confirmpassword:'',
         error: '',
         success: false
     });
 
-    const { name, email, password, success, error } = values;
+    const { name, email, password, confirmpassword,success, error } = values;
 
     const handleChange = name => event => {
         setValues({ ...values, error: false, [name]: event.target.value });
@@ -22,7 +23,7 @@ const Signup = () => {
     const clickSubmit = event => {
         event.preventDefault();
         setValues({ ...values, error: false });
-        signup({ name, email, password }).then(data => {
+        signup({ name, email, password, confirmpassword }).then(data => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
@@ -31,6 +32,7 @@ const Signup = () => {
                     name: '',
                     email: '',
                     password: '',
+                    confirmpassword:'',
                     error: '',
                     success: true
                 });
@@ -59,7 +61,12 @@ const Signup = () => {
                 <label className="text-dark font-weight-bold">Password</label>
                 <input onChange={handleChange('password')} type="password" className="form-control" value={password} />
             </div>
-            
+
+            <div className="form-group">
+                <label className="text-dark font-weight-bold">Password</label>
+                <input onChange={handleChange('confirmpassword')} type="password" className="form-control" value={confirmpassword} />
+            </div>
+
             <button onClick={clickSubmit} className="btn btn-dark text-white btn-block font-weight-bold mt-4">
                 Submit
             </button>
@@ -70,8 +77,6 @@ const Signup = () => {
             </form>
             </div>
         </div>
-            
-        
     </div>
     );
 
