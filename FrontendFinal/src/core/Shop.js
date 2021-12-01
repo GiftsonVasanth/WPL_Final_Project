@@ -100,6 +100,7 @@ const Shop = () => {
         >
         <div className="container-fluid navbar-dark w-100 shadow">
         <div className="row p-2">
+            <h3 className='text-white mt-3'>Countries</h3>
             <Checkbox
                 categories={categories}
                 handleFilters={filters =>
@@ -110,6 +111,9 @@ const Shop = () => {
         </div>
         
         <div className="container-fluid">
+
+            
+
             <div className="row mt-3">
                 <div className="col-md-2 col-sm-12 border-right shadow">
                     <h5 className="h5 font-weight-bold text-warning text-center my-3 border-bottom">Filter by price range</h5>
@@ -122,6 +126,16 @@ const Shop = () => {
                 </div>
 
                 <div className="col-md-10 col-sm-12">
+                    <div className = 'mb-3'>
+                        <Pagination
+                            count={count}
+                            size="large"
+                            page={page}
+                            variant="outlined"
+                            shape="rounded"
+                            onChange={handleChange}
+                        />
+                    </div>
                     <div className="row mx-auto">
                         {_DATA.currentData().map((product, i) => (
                             <div key={i} className="col-md-4 col-sm-6 col-xs-12 mb-3">
@@ -130,6 +144,7 @@ const Shop = () => {
                         ))}
                     </div>
                     <hr />
+                    <div className = 'mb-3'>
                     <Pagination
                         count={count}
                         size="large"
@@ -138,7 +153,7 @@ const Shop = () => {
                         shape="rounded"
                         onChange={handleChange}
                     />
-                   
+                   </div>
                 </div>
             </div>
         </div>

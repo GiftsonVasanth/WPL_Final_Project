@@ -41,7 +41,10 @@ const FooterPagePro = () => {
             </h6>
             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "70px" }} />
             <p className="text-justify">
-            A Solution that activates the travelling bug with vibrant imagery and working on to continuously provides enjoyable quality excursions/trips on time and on budget.We Focus on  developing  enthusiastically satisfied customers all of the time.
+                   Journey with us.Explore places. 
+            </p>
+            <p className="text-justify">
+                   Take memories. Leave footprints
             </p>
           </MDBCol>
           <MDBCol md="2" lg="2" xl="2" className="mb-4 dark-grey-text">

@@ -12,7 +12,8 @@ const CheckBox = ({ categories, handleFilters }) => {
 
     return categories.map((c, i) => (
         <div className="col-md-2 col-sm-4 col-xs-4" style={{height:"max-content"}}>
-        <div key={i} className="category-toolbar form-check form-check-inline my-2 w-100 bg-success rounded border">
+        
+        <div key={i} className="category-toolbar form-check form-check-inline my-2 w-100 navbar-dark rounded border">
         <label className="form-check-label py-2 d-inline rounded shadow-lg font-weight-bold text-white w-100 text-center">
             <input
                 onChange={handleChange}

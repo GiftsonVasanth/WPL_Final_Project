@@ -41,8 +41,8 @@ const Signup = () => {
     const signUpForm = () => (
         <div className="container mt-2">
         <div className="row display-flex">
-        <div className="col-xs-12 col-sm-6 col-md-5 offset-md-1 rounded-left  my-3" id="signup-form-intro">
-        <div id="signup-form-intro2" className="p-3 my-2 rounded">
+        
+        <div className="p-3 my-2 rounded">
         <h2 className="my-2 p-2 text-dark font-weight-bold text-center h2 border-bottom">Signup</h2>
             <form>
             <div className="form-group">
@@ -59,31 +59,19 @@ const Signup = () => {
                 <label className="text-dark font-weight-bold">Password</label>
                 <input onChange={handleChange('password')} type="password" className="form-control" value={password} />
             </div>
-            <div className="form-group">
-                <label className="text-dark font-weight-bold">Password again</label>
-                <input type="password" className="form-control" />
-            </div>
-            <button onClick={clickSubmit} className="btn btn-success text-white btn-block font-weight-bold mt-4">
+            
+            <button onClick={clickSubmit} className="btn btn-dark text-white btn-block font-weight-bold mt-4">
                 Submit
             </button>
             <div className="text-center py-3 my-2">
-                    <span className="text-white">Already have an Account ?  &nbsp;</span>
-                    <Link to="/signin" className="text-danger font-weight-bold">Signin</Link>
+                    <span className="text-dark">Already have an Account ?  &nbsp;</span>
+                    <Link to="/signin" className="text-dark font-weight-bold">Signin here</Link>
             </div>
             </form>
             </div>
         </div>
-            <div className="col-xs-12 col-sm-6 col-md-5 rounded-right my-3 shadow-lg" id="signup-intro">
-                <h2 className="text-white text-center my-3 p-2 h2">Welcome to TravelYaari</h2>
-                <p className="text-center text-warning py-2">We Are Happy to see you here. We are working to provide the best services to you.</p>
-                <img className="img-fluid rounded" src={towerimage} alt="signup" />
-                <div>
-                    <p className="text-center text-light py-1">By Signin, you Agree to our terms and Services. </p>
-                </div>
-                <p className="h5 text-center text-white py-1 my-1 font-weight-bold">Let's Explore the World !!!!</p>
-
-            </div>
-        </div>
+            
+        
     </div>
     );
 
