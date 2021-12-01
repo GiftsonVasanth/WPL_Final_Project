@@ -27,14 +27,16 @@ const Signin = () => {
         event.preventDefault();
         setValues({ ...values, error: false, loading: true });
         signin({ email, password }).then(data => {
-            
+            if (data.error) {
+                setValues({ ...values, error: data.error, success: false });
+            } else{
                 authenticate(data, () => {
                     setValues({
                         ...values,
                         redirectToReferrer: true
                     });
                 });
-            
+            }
         });
     };
 
