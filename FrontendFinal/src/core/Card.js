@@ -121,7 +121,7 @@ const Card = ({
     <div className="m-0 p-0 mx-1">
     {showStock(product.quantity)}
     </div>
-    <p className=" text-warning mx-1" style={{fontSize:"11px",fontWeight:"600"}}>Added on {moment(product.createdAt).fromNow()}</p>
+    <p className=" text-warning mx-1" style={{fontSize:"11px",fontWeight:"600"}}>Added {moment(product.createdAt).fromNow()}</p>
     <p className="text-info mx-1"style={{fontWeight:"600",fontSize:"0.7em"}}><span>Category: </span>{product.category && product.category.name}</p>
   </div>
   </div>
