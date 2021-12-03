@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const RadioBox = ({ prices, handleFilters }) => {
+const RadioBox2 = ({ categories, handleFilters }) => {
     // eslint-disable-next-line
     const [value, setValue] = useState(0);
 
@@ -9,7 +9,7 @@ const RadioBox = ({ prices, handleFilters }) => {
         setValue(event.target.value);
     };
 
-    return prices.map((p, i) => (
+    return categories.map((p, i) => (
         <div key={i}>
         <label className="form-check-label all-text-color">
             <input
@@ -24,4 +24,4 @@ const RadioBox = ({ prices, handleFilters }) => {
     ));
 };
 
-export default RadioBox;
+export default RadioBox2;

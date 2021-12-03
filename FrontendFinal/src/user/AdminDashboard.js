@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
     const adminLinks = () => {
         return (
-            <div className="card my-5 bg-success">
+            <div className="card my-5 navbar-dark">
                 <h4 className="card-header text-white">Admin Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
@@ -33,11 +33,7 @@ const AdminDashboard = () => {
                             Manage Places
                         </Link>
                     </li>
-                    <li className="list-group-item">
-                        <Link className="nav-link" to="/admin/categories">
-                            Manage categories
-                        </Link>
-                    </li>
+                    
                 </ul>
             </div>
         );
@@ -45,7 +41,7 @@ const AdminDashboard = () => {
 
     const adminInfo = () => {
         return (
-            <div className="card my-5 bg-success">
+            <div className="card my-5 navbar-dark">
                 <h3 className="card-header text-white">User Information</h3>
                 <ul className="list-group">
                     <li className="list-group-item">{name}</li>

@@ -111,7 +111,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                         }}
                         onInstance={instance => (data.instance = instance)}
                     />
-                    <button onClick={buy} className="btn btn-success btn-block">
+                    <button onClick={buy} className="btn btn-dark btn-block">
                         Pay
                     </button>
                 </div>
@@ -135,7 +135,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     return (
         <div>
-            <h4 className="p-2 my-2 text-info font-weight-bold">Total: ${getTotal()}</h4>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
             {showError(data.error)}

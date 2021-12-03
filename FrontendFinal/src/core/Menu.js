@@ -28,7 +28,7 @@ const Menu = ({ history }) => (
                     <li className="nav-item">
                         <a
                             className="nav-link text-white"
-                            href="#home-popularplace"
+                            href="/#home-popularplace"
                         >
                             Popular Places
                         </a>
@@ -37,7 +37,7 @@ const Menu = ({ history }) => (
                     <li className="nav-item">
                     <a
                             className="nav-link text-white"
-                            href="#homegallery"
+                            href="/#homegallery"
                         >
                             Gallery
                         </a>

@@ -85,7 +85,7 @@ const Profile = ({ match }) => {
 
     return (
         <Layout title="Profile" description="Update your profile" className="container mt-5 border rounded p-3 shadow-lg bg-light">
-            <h2 className="mb-4 p-2 bg-success text-white text-center font-weight-bold rounded shadow">Profile update</h2>
+            <h2 className="mb-4 p-2 navbar-dark text-white text-center font-weight-bold rounded shadow">Profile update</h2>
             {profileUpdate(name, email, password)}
             {redirectUser(success)}
         </Layout>

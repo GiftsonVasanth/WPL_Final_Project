@@ -105,16 +105,16 @@ const FooterPagePro = () => {
             </h6>
             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
             <p>
-              <i className="fa fa-home mr-3" /> Gorakhpur, UP 274203, India
+              <i className="fa fa-home mr-3" /> 850 Cecil Drive, Dallas
             </p>
             <p>
-              <i className="fa fa-envelope mr-3" /> info@travelyaari.com
+              <i className="fa fa-envelope mr-3" /> info@thetour.com
             </p>
             <p>
-              <i className="fa fa-phone mr-3" /> + 01 234 567 88
+              <i className="fa fa-phone mr-3" /> +1 469 469 9292
             </p>
             <p>
-              <i className="fa fa-print mr-3" /> + 01 234 567 89
+              <i className="fa fa-print mr-3" /> +1 469 469 9292
             </p>
           </MDBCol>
         </MDBRow>
@@ -122,7 +122,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3 navbar-dark">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://github.com/shsarv"> www.travelyaari.com</a>
+          <a href="https://github.com/shsarv"> www.thetour.com</a>
         </MDBContainer>
       </div>
     </MDBFooter>

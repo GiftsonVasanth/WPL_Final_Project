@@ -31,7 +31,7 @@ const Dashboard = () => {
     const userLinks = () => {
         return (
             <div className="card mt-4">
-                <h4 className="card-header bg-success text-white font-weight-bold text-center">User Links</h4>
+                <h4 className="card-header navbar-dark text-white font-weight-bold text-center">User Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item font-weight-bold">
                         <Link className="nav-link" to="/cart">
@@ -51,7 +51,7 @@ const Dashboard = () => {
     const userInfo = () => {
         return (
             <div className="card mb-5 mt-4">
-                <h3 className="card-header bg-success text-white font-weight-bold text-center">User Information</h3>
+                <h3 className="card-header navbar-dark text-white font-weight-bold text-center">User Information</h3>
                 <ul className="list-group">
                     <li className="list-group-item  text-info font-weight-bold"><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; {name}</li>
                     <li className="list-group-item  text-info font-weight-bold"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; {email}</li>
@@ -66,7 +66,7 @@ const Dashboard = () => {
     const purchaseHistory = history => {
         return (
             <div className="card mb-5">
-                <h3 className="card-header bg-success text-white font-weight-bold text-center">Purchase history</h3>
+                <h3 className="card-header navbar-dark text-white font-weight-bold text-center">Purchase history</h3>
                 <ul className="list-group">
                     <li className="list-group-item text-warning font-weight-bold">
                         {history.map((h, i) => {
@@ -79,6 +79,12 @@ const Dashboard = () => {
                                                 <h6>Product name: {p.name}</h6>
                                                 <h6>
                                                     Product price: ${p.price}
+                                                </h6>
+                                                <h6>
+                                                    Quantity Purchased: {p.count}
+                                                </h6>
+                                                <h6>
+                                                    Amount Paid: ${p.count * p.price}
                                                 </h6>
                                                 <h6>
                                                     Purchased date:{" "}

@@ -4,6 +4,7 @@ import Card from "./Card";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
+import RadioBox2 from "./RadioBox2";
 import { prices } from "./fixedPrices";
 import usePagination from "./pagination";
 import { Pagination } from "@material-ui/lab";
@@ -98,17 +99,7 @@ const Shop = () => {
             description=""
             className=""
         >
-        <div className="container-fluid navbar-dark w-100 shadow">
-        <div className="row p-2">
-            <h3 className='text-white mt-3'>Countries</h3>
-            <Checkbox
-                categories={categories}
-                handleFilters={filters =>
-                handleFilters(filters, "category")
-                }
-            />
-        </div>
-        </div>
+        
         
         <div className="container-fluid">
 
@@ -116,14 +107,24 @@ const Shop = () => {
 
             <div className="row mt-3">
                 <div className="col-md-2 col-sm-12 border-right shadow">
-                    <h5 className="h5 font-weight-bold text-warning text-center my-3 border-bottom">Filter by price range</h5>
+                    <h5 className="h5 font-weight-bold all-text-color text-center my-3 border-bottom">Filter by price range</h5>
                     <RadioBox
                         prices={prices}
                         handleFilters={filters =>
                         handleFilters(filters, "price")
                     }
                     />
+
+                    <h3 className='h5 font-weight-bold all-text-color text-center my-3 border-bottom'>Filter by Countries</h3>
+                    <RadioBox2
+                        categories={categories}
+                        handleFilters={filters =>
+                        handleFilters(filters, "category")
+                        }
+                    />
                 </div>
+
+            
 
                 <div className="col-md-10 col-sm-12">
                     <div className = 'mb-3'>

@@ -44,7 +44,7 @@ const Signup = () => {
         <div className="container mt-2">
         <div className="row display-flex">
         
-        <div className="p-3 my-2 rounded">
+        <div className="p-3 my-2 rounded moveCenter">
         <h2 className="my-2 p-2 text-dark font-weight-bold text-center h2 border-bottom">Signup</h2>
             <form>
             <div className="form-group">

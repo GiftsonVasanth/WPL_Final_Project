@@ -15,7 +15,8 @@ export default function Corosal() {
       <div className="text-right">
       <h1 className="display-4 text-white pb-3 font-weight-bold">We Work With All Budgets</h1>
       <p className="d-block w-100 h5">Book a ticket and just leave.</p>
-      <button className="btn btn-success btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><a href='#search'>Search Place</a></button>
       </div>
     </Carousel.Caption>
   </Carousel.Item>
@@ -25,7 +26,8 @@ export default function Corosal() {
       <div className="text-left">
       <h1 className="display-4 text-white pb-3 font-weight-bold">Group & Individual Getaways Experience. </h1>
       <p className="d-block w-100 h5">Amsterdam. Barcelona. Dubai. London. Paris. Rome</p>
-      <button className="btn btn-success btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><a href='#search'>Search Place</a></button>
       </div>
     </Carousel.Caption>
   </Carousel.Item>
@@ -35,7 +37,8 @@ export default function Corosal() {
       <div className="text-center">
       <h1 className="display-4 text-white pb-3 font-weight-bold">Take Your Dream Vacation</h1>
       <p className="d-block w-100 h5">Adventure awaits, go find it.</p>
-      <button className="btn btn-success btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
+      <button className="btn btn-dark btn-lg text-white mt-2"><a href='#search'>Search Place</a></button>
       </div>
     </Carousel.Caption>
   </Carousel.Item>

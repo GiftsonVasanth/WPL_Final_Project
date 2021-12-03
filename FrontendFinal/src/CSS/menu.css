@@ -9,6 +9,14 @@
     box-shadow: 0 8px 6px -6px rgb(43, 42, 42);
 }
 
+.all-text-color{
+    color:#333333;
+}
+
+a {
+    color: inherit;
+}
+
 #my-nav .navbar-brand,
 .navbar-brand:hover{
     color: white !important;

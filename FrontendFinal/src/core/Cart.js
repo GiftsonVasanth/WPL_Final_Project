@@ -51,7 +51,7 @@ const Cart = () => {
                 </div>
                 <div className="col-5 offset-1">
                 <div className="my-4 card p-3">
-                    <h2 className="my-2 p-3 border rounded shadow text-warning text-center">Your cart summary</h2>
+                    <h2 className="my-2 p-3 border rounded shadow text-warning text-center">Your cart   </h2>
                     <hr />
                     <Checkout products={items} setRun={setRun} run={run} />
                     </div>
