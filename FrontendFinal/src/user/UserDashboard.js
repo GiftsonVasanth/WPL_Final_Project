@@ -56,7 +56,7 @@ const Dashboard = () => {
                     <li className="list-group-item  text-info font-weight-bold"><i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp; {name}</li>
                     <li className="list-group-item  text-info font-weight-bold"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; {email}</li>
                     <li className="list-group-item  text-info font-weight-bold"><i class="fa fa-registered" aria-hidden="true"></i> &nbsp;
-                        {role === 1 ? "Admin" : "Registered Travelyaari User 😇"}
+                        {role === 1 ? "Admin" : "Registered WanderPaths User 😇"}
                     </li>
                 </ul>
             </div>

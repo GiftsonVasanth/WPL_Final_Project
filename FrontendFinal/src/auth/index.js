@@ -50,7 +50,7 @@ export const signout = next => {
         })
             .then(response => {
                 console.log('signout', response);
-                alert("you have been signed out successfuly !!!");
+                alert("You have been Signed Out");
             })
             .catch(err => console.log(err));
     }

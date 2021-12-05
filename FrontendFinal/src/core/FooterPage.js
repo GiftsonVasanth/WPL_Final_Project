@@ -37,7 +37,7 @@ const FooterPagePro = () => {
         <MDBRow className="mt-3">
           <MDBCol md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
             <h6 className="font-weight-bold">
-              TravelYaari
+              WanderPaths
             </h6>
             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "70px" }} />
             <p className="text-justify">
