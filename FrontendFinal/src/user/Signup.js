@@ -4,6 +4,7 @@ import Layout from '../core/Layout';
 import { signup } from '../auth';
 import './../CSS/signup.css';
 import towerimage from "./../image/signup/bg2.jpeg";
+import welcome from './../image/login/Signup.jpeg';
 const Signup = () => {
     const [values, setValues] = useState({
         name: '',
@@ -44,7 +45,7 @@ const Signup = () => {
         <div className="container mt-2">
         <div className="row display-flex">
         
-        <div className="p-3 my-2 rounded moveCenter">
+        <div className="p-3 my-2 rounded moveCenter" style={{"margin-left":"10px" }}>
         <h2 className="my-2 p-2 text-dark font-weight-bold text-center h2 border-bottom">Signup</h2>
             <form>
             <div className="form-group">
@@ -72,9 +73,12 @@ const Signup = () => {
             </button>
             <div className="text-center py-3 my-2">
                     <span className="text-dark">Already have an Account ?  &nbsp;</span>
-                    <Link to="/signin" className="text-dark font-weight-bold">Signin here</Link>
+                    <Link to="/signin" className="text-dark font-weight-bold" style={{textDecoration : "underline"}}>Signin here</Link>
             </div>
             </form>
+            </div>
+            <div className="p-3 my-2 rounded moveCenter" style={{"margin-left":"100px" }}>
+                    <img className="rounded-circle mx-auto d-block" src={welcome} width="500px" height="500px" alt="" />
             </div>
         </div>
     </div>
@@ -88,7 +92,7 @@ const Signup = () => {
 
     const showSuccess = () => (
         <div className="alert alert-info mt-3" style={{ display: success ? '' : 'none' }}>
-            New account is created. Please <Link to="/signin">Signin</Link>
+            New account is created. Please <Link to="/signin" style={{textDecoration : "underline"}}>Signin</Link>
         </div>
     );
 

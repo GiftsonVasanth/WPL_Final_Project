@@ -5,6 +5,7 @@ import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../auth";
 import LoadingOverlay from 'react-loading-overlay';
 import avatar from './../image/login/avatar.png';
+import login from './../image/login/login.jpg';
 import sideimage from './../image/login/side.jpg';
 import './../CSS/signin.css';
 const Signin = () => {
@@ -44,7 +45,7 @@ const Signin = () => {
 
         <div className="container mt-2">
         <div className="row display-flex">
-            <div className="col-sm-8 col-xs-10 col-md-4 offset-md-2 offset-sm-2 offset-xs-1 py-4 px-3 rounded-left">
+            <div className="p-3 my-2 rounded moveCenter">   
                 
                 <div className="p-4 mb-3">
                     <img className="rounded-circle mx-auto d-block" src={avatar} width="100px" height="100px" alt="" />
@@ -74,10 +75,13 @@ const Signin = () => {
                     </form>
                     <div className="text-center">
                     <span className="text-center d-block text-dark font-weight-bold text-italic">or</span>
-                    <Link to="/signup" className="text-dark font-weight-bold">Create an account here!! </Link>
+                    <Link to="/signup" className="text-dark font-weight-bold" style={{textDecoration : "underline"}}>Create an account here!! </Link>
                     </div>
                 </div>
 
+            </div>
+            <div className="p-3 my-2 rounded moveCenter" style={{"margin-left":"100px" }}>
+                    <img className="rounded-circle mx-auto d-block ms-10" src={login} width="400px" height="400px" alt="" />
             </div>
 
         </div>
