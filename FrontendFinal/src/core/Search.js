@@ -112,7 +112,7 @@ const Search = () => {
                     className="input-group d-block ml-2 col-xs-6 col-sm-4 col-md-3 mx-auto"
                     style={{ border: "none" }}
                     >
-                    <button className="btn my-2 btn-info btn-block">Search</button>
+                    <button className="btn my-2 btn-info btn-block">Find</button>
                     </div>
                 </div>
             </span>
