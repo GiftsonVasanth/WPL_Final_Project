@@ -92,6 +92,7 @@ const Dashboard = () => {
                                                         p.createdAt
                                                     ).fromNow()}
                                                 </h6>
+                                                <hr></hr>
                                             </div>
                                         );
                                     })}

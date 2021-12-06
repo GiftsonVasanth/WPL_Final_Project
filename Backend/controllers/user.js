@@ -79,7 +79,7 @@ exports.update = (req, res) => {
 
 exports.addOrderToUserHistory = (req, res, next) => {
     let history = [];
-
+    console.log('Adding user to user history');
     req.body.order.products.forEach(item => {
         history.push({
             _id: item._id,
