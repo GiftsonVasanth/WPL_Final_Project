@@ -7,7 +7,7 @@ export const prices = [
     {
         _id: 1,
         name: "$0 to $99",
-        array: [0, 100]
+        array: [0, 99]
     },
     {
         _id: 2,

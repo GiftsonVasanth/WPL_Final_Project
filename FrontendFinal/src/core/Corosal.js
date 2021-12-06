@@ -25,7 +25,7 @@ export default function Corosal() {
     <Carousel.Caption className="corosal-caption-center justify-content-start">
       <div className="text-left">
       <h1 className="display-4 text-white pb-3 font-weight-bold">Group & Individual Getaways Experience. </h1>
-      <p className="d-block w-100 h5">Amsterdam. Barcelona. Dubai. London. Paris. Rome</p>
+      <p className="d-block w-100 h5">New York. Amsterdam. Barcelona. Dubai. London. Paris</p>
       <button className="btn btn-dark btn-lg text-white mt-2"><Link to='/shop' className="text-white">Check Packages</Link></button>
       <button className="btn btn-dark btn-lg text-white mt-2"><a href='#search'>Search Place</a></button>
       </div>

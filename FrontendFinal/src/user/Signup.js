@@ -64,7 +64,7 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-dark font-weight-bold">Password</label>
+                <label className="text-dark font-weight-bold">Confirm Password</label>
                 <input onChange={handleChange('confirmpassword')} type="password" className="form-control" value={confirmpassword} />
             </div>
 

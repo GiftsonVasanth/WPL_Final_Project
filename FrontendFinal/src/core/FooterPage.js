@@ -108,7 +108,7 @@ const FooterPagePro = () => {
               <i className="fa fa-home mr-3" /> 850 Cecil Drive, Dallas
             </p>
             <p>
-              <i className="fa fa-envelope mr-3" /> info@thetour.com
+              <i className="fa fa-envelope mr-3" /> info@wanderpaths.com
             </p>
             <p>
               <i className="fa fa-phone mr-3" /> +1 469 469 9292
@@ -122,7 +122,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3 navbar-dark">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://github.com/shsarv"> www.thetour.com</a>
+          <a href="https://github.com/shsarv"> www.wanderpaths.com</a>
         </MDBContainer>
       </div>
     </MDBFooter>

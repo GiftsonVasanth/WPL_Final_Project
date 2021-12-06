@@ -115,7 +115,7 @@ const Shop = () => {
                     }
                     />
 
-                    <h3 className='h5 font-weight-bold all-text-color text-center my-3 border-bottom'>Filter by Countries</h3>
+                    <h3 className='h5 font-weight-bold all-text-color text-center my-3 border-bottom'>Filter by Cities</h3>
                     <RadioBox2
                         categories={categories}
                         handleFilters={filters =>

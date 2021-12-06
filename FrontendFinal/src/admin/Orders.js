@@ -41,9 +41,9 @@ const Orders = () => {
     const showOrdersLength = () => {
         if (orders.length > 0) {
             return (
-                <h1 className="text-danger display-2 my-2 p-1 border">
+                <h4 className="display-4 my-2 p-1 border">
                     Total Place orders: {orders.length}
-                </h1>
+                </h4>
             );
         } else {
             return <h1 className="text-danger my-2 p-1 border">No Place orders</h1>;
